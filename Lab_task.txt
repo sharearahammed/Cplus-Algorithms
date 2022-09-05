@@ -1,0 +1,888 @@
+####>Lab-3
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Account
+{
+    //fields
+    private string accName;
+    private string acid;
+    private int balance;
+
+    //property
+    public string AccName
+    {
+        get
+        {
+            return accName;
+        }
+        set
+        {
+            accName = value;
+        }
+    }
+    public string Acid
+    {
+        get
+        {
+            return acid;
+        }
+        set
+        {
+            acid = value;
+        }
+    }
+    public int Balance
+    {
+        get
+        {
+            return balance;
+        }
+        set
+        {
+            balance = value;
+        }
+    }
+
+    //methods
+    public Account()
+    {
+
+    }
+    public Account(string name, string id, int balance)
+    {
+        this.AccName = name;
+        this.Acid = id;
+        this.Balance = balance;
+    }
+
+    public void Deposit(int amount)
+    {
+        this.Balance += amount;
+    }
+    public void Withdraw(int amount)
+    {
+        this.balance -= amount;
+    }
+    public void Transfer(int amount, Account receiver)
+    {
+        this.Balance -= amount;
+        receiver.Balance += amount;
+    }
+}
+}
+
+
+
+######
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Course
+{
+    string courseName;
+    string courseCode;
+    int courseCredit;
+
+    public string CourseName
+    {
+        get
+        {
+            return courseName;
+        }
+        set
+        {
+            courseName = value;
+        }
+    }
+    public string CourseCode
+    {
+        get
+        {
+            return courseCode;
+        }
+        set
+        {
+            courseCode = value;
+        }
+    }
+    public int CourseCredit
+    {
+        get
+        {
+            return courseCredit;
+        }
+        set
+        {
+            courseCredit = value;
+        }
+    }
+
+    public Course()
+    {
+    }
+    public Course(string courseName, string courseCode, int courseCredit)
+    {
+        CourseName = courseName;
+        CourseCode = courseCode;
+        CourseCredit = courseCredit;
+    }
+
+    public void ShowCourseInfo()
+    {
+        Console.WriteLine("Course Details...");
+        Console.WriteLine("Name: " + CourseName + "\nCode: " + CourseCode + "\nCredit: " + CourseCredit);
+    }
+
+
+}
+}
+
+
+
+
+
+####>Lab-4
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Account
+{
+    //fields
+    private string accName;
+    private string acid;
+    private int balance;
+
+    //property
+    public string AccName
+    {
+        get
+        {
+            return accName;
+        }
+        set
+        {
+            accName = value;
+        }
+    }
+    public string Acid
+    {
+        get
+        {
+            return acid;
+        }
+        set
+        {
+            acid = value;
+        }
+    }
+    public int Balance
+    {
+        get
+        {
+            return balance;
+        }
+        set
+        {
+            balance = value;
+        }
+    }
+
+    //methods
+    public Account()
+    {
+
+    }
+    public Account(string name, string id, int balance)
+    {
+        this.AccName = name;
+        this.Acid = id;
+        this.Balance = balance;
+    }
+
+    public void Deposit(int amount)
+    {
+        this.Balance += amount;
+    }
+    public void Withdraw(int amount)
+    {
+        this.balance -= amount;
+    }
+    public void Transfer(int amount, Account receiver)
+    {
+        this.Balance -= amount;
+        receiver.Balance += amount;
+    }
+}
+}
+
+
+####
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Book
+{
+    private string bookName;
+    private string bookAuthor;
+    private string bookId;
+    private string bookType;
+    private int bookCopy;
+
+    static int bookCounter;
+
+    public string BookName
+    {
+        get
+        {
+            return bookName;
+        }
+        set
+        {
+            bookName = value;
+        }
+    }
+    public string BookAuthor
+    {
+        get
+        {
+            return bookAuthor;
+        }
+        set
+        {
+            bookAuthor = value;
+        }
+    }
+    public string BookId
+    {
+        get
+        {
+            return bookId;
+        }
+        set
+        {
+            bookId = value;
+        }
+    }
+    public string BookType
+    {
+        get
+        {
+            return bookType;
+        }
+        set
+        {
+            bookType = value;
+        }
+    }
+    public int BookCopy
+    {
+        get
+        {
+            return bookCopy;
+        }
+        set
+        {
+            bookCopy = value;
+        }
+    }
+
+    public Book()
+    {
+        BookName = null;
+        BookAuthor = null;
+        BookId = null;
+        BookType = null;
+        BookCopy = 0;
+    }
+
+    public Book(string bookName, string bookAuthor, string bookId, string bookType, int bookCopy)
+    {
+        BookName = bookName;
+        BookAuthor = bookAuthor;
+        BookId = bookId;
+        BookType = bookType;
+        BookCopy = bookCopy;
+    }
+
+    public void ShowInfo()
+    {
+        Console.WriteLine("Book Details...");
+        Console.WriteLine("Name: " + BookName + "\nAuthor: " + BookAuthor + "\nID: " + BookId + "\nType: " + BookType + "\nCopy: " + BookCopy);
+    }
+
+    public void AddBookCopy(int amount)
+    {
+        BookCopy += amount;
+    }
+
+    static void ShowTotalBookInfo()
+    {
+
+    }
+}
+}
+
+
+####
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Contact
+{
+    string personName;
+    string personId;
+    int age;
+    string mobileNumber;
+    char gender;
+
+    public string PersonName
+    {
+        get
+        {
+            return personName;
+        }
+        set
+        {
+            personName = value;
+        }
+    }
+    public string PersonId
+    {
+        get
+        {
+            return personId;
+        }
+        set
+        {
+            personId = value;
+        }
+    }
+    public int Age
+    {
+        get
+        {
+            return age;
+        }
+        set
+        {
+            age = value;
+        }
+    }
+    public string MobileNumber
+    {
+        get
+        {
+            return mobileNumber;
+        }
+        set
+        {
+            mobileNumber = value;
+        }
+    }
+    public char Gender
+    {
+        get
+        {
+            return gender;
+        }
+        set
+        {
+            gender = value;
+        }
+    }
+
+    public Contact()
+    {
+    }
+
+    public Contact(string personName, string personId, int age, string mobileNumber, char gender)
+    {
+        PersonName = personName;
+        PersonId = personId;
+        Age = age;
+        MobileNumber = mobileNumber;
+        Gender = gender;
+    }
+
+    public void ShowPersonInfo()
+    {
+        Console.WriteLine("Person Details...");
+        Console.WriteLine("Name: " + PersonName + "\nID: " + PersonId + "\nAge: " + Age + "\nMobile Number: " + MobileNumber + "Gender: " + Gender);
+    }
+
+    public void DetectMobileOperator()
+    {
+        if(MobileNumber != null)
+        {
+            string digits = MobileNumber.Substring(0, 3);
+            if (digits == "017" || digits == "013")
+            {
+                Console.WriteLine("Operator is GP");
+            }
+            else if (digits == "019" || digits == "014")
+            {
+                Console.WriteLine("Operator is Banglalink");
+            }
+            else if (digits == "015")
+            {
+                Console.WriteLine("Operator is Teletalk");
+            }
+            else if (digits == "018")
+            {
+                Console.WriteLine("Operator is Robi");
+            }
+            else
+            {
+                Console.WriteLine("Invalid Number");
+            }
+        }
+    }
+}
+}
+
+####
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Course
+{
+    string courseName;
+    string courseCode;
+    int courseCredit;
+
+    public string CourseName
+    {
+        get
+        {
+            return courseName;
+        }
+        set
+        {
+            courseName = value;
+        }
+    }
+    public string CourseCode
+    {
+        get
+        {
+            return courseCode;
+        }
+        set
+        {
+            courseCode = value;
+        }
+    }
+    public int CourseCredit
+    {
+        get
+        {
+            return courseCredit;
+        }
+        set
+        {
+            courseCredit = value;
+        }
+    }
+
+    public Course()
+    {
+    }
+    public Course(string courseName, string courseCode, int courseCredit)
+    {
+        CourseName = courseName;
+        CourseCode = courseCode;
+        CourseCredit = courseCredit;
+    }
+
+    public void ShowCourseInfo()
+    {
+        Console.WriteLine("Course Details...");
+        Console.WriteLine("Name: " + CourseName + "\nCode: " + CourseCode + "\nCredit: " + CourseCredit);
+    }
+
+
+}
+}
+
+
+
+####
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Mobile
+{
+    string mobileOwnerName;
+    string mobileNumber; // SIM number
+    string mobileBalance;
+    string mobileOSName;
+    bool isLocked;
+
+    public string MobileOwnerName
+    {
+        get
+        {
+            return mobileOwnerName;
+        }
+        set
+        {
+            mobileOwnerName = value;
+        }
+    }
+    public string MobileNumber
+    {
+        get
+        {
+            return mobileNumber;
+        }
+        set
+        {
+            mobileNumber = value;
+        }
+    }
+    public string MobileBalance
+    {
+        get
+        {
+            return mobileBalance;
+        }
+        set
+        {
+            mobileBalance = value;
+        }
+    }
+    public string MobileOSName
+    {
+        get
+        {
+            return mobileOSName;
+        }
+        set
+        {
+            mobileOSName = value;
+        }
+    }
+    public bool IsLocked
+    {
+        get
+        {
+            return isLocked;
+        }
+        set
+        {
+            isLocked = value;
+        }
+    }
+
+    public Mobile()
+    {
+
+    }
+    public Mobile(string mobileOwnerName, string mobileNumber, string mobileBalance, string mobileOSName, bool isLocked)
+    {
+        MobileOwnerName = mobileOwnerName;
+        MobileNumber = mobileNumber;
+        MobileBalance = mobileBalance;
+        MobileOSName = mobileOSName;
+        IsLocked = isLocked;
+    }
+
+    public void ShowInfo()
+    {
+        Console.WriteLine("Phone Details...");
+        Console.WriteLine("Owner Name: " + MobileOwnerName);
+        Console.WriteLine("Number: " + MobileNumber);
+        Console.WriteLine("Balance: " + MobileBalance);
+        Console.WriteLine("OS Name: " + MobileOSName);
+        Console.WriteLine("Is Locked: " + IsLocked);
+    }
+
+    public void Recharge(int amount)
+    {
+        if (!isLocked)
+            MobileBalance = (Convert.ToInt32(MobileBalance) + amount).ToString();
+        else
+            Console.WriteLine("Mobile is Locked!");
+    }
+
+    public void CallSomeone(int timeDuration)
+    {
+        if (!isLocked)
+            MobileBalance = (Convert.ToInt32(MobileBalance) - timeDuration).ToString();
+        else
+            Console.WriteLine("Mobile is Locked!");
+    }
+}
+}
+
+
+
+
+
+###>Lab-5
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class Library
+{
+    string libName;
+    string libAddress;
+    Book[] listOfBook;
+    int totalBook;
+
+    public string LibName
+    {
+        get
+        {
+            return libName;
+        }
+        set
+        {
+            libName = value;
+        }
+    }
+    public string LibAddress
+    {
+        get
+        {
+            return libAddress;
+        }
+        set
+        {
+            libAddress = value;
+        }
+    }
+    public Book[] ListOfBook
+    {
+        get
+        {
+            return listOfBook;
+        }
+        set
+        {
+            listOfBook = value;
+        }
+    }
+    public int TotalBook
+    {
+        get
+        {
+            return totalBook;
+        }
+        set
+        {
+            totalBook = value;
+        }
+    }
+
+    public Library()
+    {
+
+    }
+
+    public Library(string libName, string libAddress, Book[] listOfBook, int totalBook)
+    {
+        LibName = libName;
+        LibAddress = libAddress;
+        ListOfBook = listOfBook;
+        TotalBook = totalBook;
+    }
+
+    public void ShowLibInfo()
+    {
+        Console.WriteLine("Library Info...");
+        Console.WriteLine("Name: " + LibName + "Address: " + LibAddress + "Total Book: " + TotalBook);
+        if(listOfBook.Length > 0)
+        {
+            foreach(Book book in ListOfBook)
+            {
+                book.ShowInfo();
+            }
+        }
+    }
+
+    public void AddNewBook(Book book)
+    {
+        listOfBook[totalBook++] = book;
+    }
+
+    public void DeleteBook(Book book)
+    {
+        for(int i=0; i<totalBook; i++)
+        {
+            if (ListOfBook[i].Equals(book))
+            {
+                for (int j=i; j<totalBook-1; j++)
+                {
+                    ListOfBook[j] = ListOfBook[j+1];
+                }
+                totalBook--;
+                break;
+            }
+        }
+    }
+
+    public void AddNewBookCopy(Book book, int copy)
+    {
+        for (int i = 0; i < totalBook; i++)
+        {
+            if (ListOfBook[i].Equals(book))
+            {
+                ListOfBook[i].BookCopy += copy;
+                break;
+            }
+        }
+    }
+
+}
+}
+
+
+
+####
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+class AddressBook
+{
+    string ownerName;
+    string info;
+    Contact[] listOfContact;
+
+    public string OwnerName
+    {
+        get
+        {
+            return ownerName;
+        }
+        set
+        {
+            ownerName = value;
+        }
+    }
+    public string Info
+    {
+        get
+        {
+            return info;
+        }
+        set
+        {
+            info = value;
+        }
+    }
+    public Contact[] ListOfContact
+    {
+        get
+        {
+            return listOfContact;
+        }
+        set
+        {
+            listOfContact = value;
+        }
+    }
+
+    public AddressBook()
+    {
+
+    }
+    public AddressBook(string ownerName, string info, Contact[] listOfContact)
+    {
+        OwnerName = ownerName;
+        Info = info;
+        ListOfContact = listOfContact;
+    }
+
+    public void ShowAllContactInfo()
+    {
+        Console.WriteLine("Owner Name: " + ownerName + "Info: " + info);
+        if(ListOfContact.Length > 0)
+        {
+            Console.WriteLine("Contact Details...");
+            foreach(Contact contact in ListOfContact)
+            {
+                contact.ShowPersonInfo();
+                Console.WriteLine();
+            }
+        }
+
+    }
+
+    public void AddContact(Contact con)
+    {
+        for(int i=0; i<ListOfContact.Length; i++)
+        {
+            if(ListOfContact[i] == null)
+            {
+                ListOfContact[i] = con;
+                break;
+            }
+        }
+    }
+    public void DeleteContact(Contact con)
+    {
+        for (int i = 0; i < ListOfContact.Length; i++)
+        {
+            if (ListOfContact[i].Equals(con))
+            {
+                for (int j = i; j < ListOfContact.Length-1 - 1; j++)
+                {
+                    ListOfContact[j] = ListOfContact[j + 1];
+                }
+                break;
+            }
+        }
+    }
+}
+}
